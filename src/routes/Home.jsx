@@ -1,41 +1,123 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Card from '../components/card';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import ContactBar from '../components/contactbar';
+import Footer from './Footer';
 
 export class Home extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <div className="bg-light d-flex justify-content-center py-2">
-          <p className="lead">
-            How to Enroll Your Child to a Class? <button className='btn btn-outline-success badge badge-pill'>Join Now</button>
-          </p>
-        </div>
-        <div className='container'>
+      <div className="container-fluid mt-5">
+        <ScrollableAnchor id={'home'}>
           <div className="row">
-            <div className="col-md-10">
-              <h2>TALLY COURSE FEATURES</h2>
-              <div className="row">
-                <div className="col-md-4">
-                  <h1>Icon</h1>
-                Planned Curriculum
-                <p>The entire Tally Online Course is designed to meet the requirements of industry and are approved from C.A. & Business Experts.</p>
+            <div className="container-fluid"></div>
+          </div>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'courses'}>
+          <div className="row">
+            <div className="container-fluid">
+              <div className="container courses">
+                <div className="row d-flex justify-content-center align-items-center">
+                  <div className="col my-3">
+                    <Card
+                      title={'TALLYACE'}
+                      desc={
+                        "It is a basic level certification and certifies a candidate's skill on Computerized Accounting and Tally. This certification assists candidates to become job-ready and opens up multiple career options."
+                      }
+                    />
+                  </div>
+                  <div className="col my-3">
+                    <Card
+                      title={'TALLYACE'}
+                      desc={
+                        "It is a basic level certification and certifies a candidate's skill on Computerized Accounting and Tally. This certification assists candidates to become job-ready and opens up multiple career options."
+                      }
+                    />
+                  </div>
                 </div>
-                <div className="col-md-4">
-                  <h1>Icon</h1>
-                Effective Lessons
-                <p>Topics are explained through step by step process in a very simple language which is easy for students to understand and learn.</p>
-                </div>
-                <div className="col-md-4">
-                  <h1>Icon</h1>
-                Certification
-                <p>We conduct online examination in MCQ Format and you will be awarded with Tally Expert certificate on passing exams.</p>
+                <div className="row d-flex justify-content-center align-items-center">
+                  <div className="col my-3">
+                    <Card
+                      title={'TALLYACE'}
+                      desc={
+                        "It is a basic level certification and certifies a candidate's skill on Computerized Accounting and Tally. This certification assists candidates to become job-ready and opens up multiple career options."
+                      }
+                    />
+                  </div>
+                  <div className="col my-3">
+                    <Card
+                      title={'TALLYACE'}
+                      desc={
+                        "It is a basic level certification and certifies a candidate's skill on Computerized Accounting and Tally. This certification assists candidates to become job-ready and opens up multiple career options."
+                      }
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'contact'}>
+          <div className="row">
+            <div className="container-fluid">
+              <div className="row text-center align-items-center justify-content-center flex-column">
+                <h1>Contact Us</h1>
+                <div className="container">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="Password"
+                      />
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label class="form-check-label" for="exampleCheck1">
+                        Check me out
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'footer'}>
+          <div className="row">
+            <div className="container-fluid footer">
+              <div className="row my-3">
+                <Footer />
+              </div>
+
+              <div className="row">
+                <ContactBar />
+              </div>
+            </div>
+          </div>
+        </ScrollableAnchor>
       </div>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
